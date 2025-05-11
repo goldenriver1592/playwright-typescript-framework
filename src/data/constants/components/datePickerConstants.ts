@@ -5,6 +5,6 @@ export const DatePickerSelectors = {
 }
 
 export const DateString = {
-    startDate: '2024-02-02', 
+    startDate: '2024-02-02',
     endDate: '2025-12-01',
 }

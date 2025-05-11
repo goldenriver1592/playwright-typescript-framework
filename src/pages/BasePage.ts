@@ -1,7 +1,7 @@
 import { Locator, Page, test } from "@playwright/test";
 
 export abstract class BasePage {
-  constructor(protected page: Page) {}
+  constructor(protected page: Page) { }
 
   /**
    * Navigate to a specific URL
@@ -30,6 +30,7 @@ export abstract class BasePage {
   /**
    * Get element by selector with built-in wait
    * @param selector - The selector to find the element
+   * @returns Promise<Locator>
    */
   protected async getElementDebug(selector: string): Promise<Locator> {
     return await test.step(`Get element ${selector}`, async () => {
