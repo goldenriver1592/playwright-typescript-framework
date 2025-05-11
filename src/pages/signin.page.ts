@@ -1,4 +1,4 @@
-import { expect, Locator } from '@playwright/test';
+import { Locator } from '@playwright/test';
 import { SignInPageSelectors as S, SignInPageMessages as M } from '../data/constants/pages/signInPageConstants';
 import { BasePage } from "./base.page";
 
@@ -57,11 +57,23 @@ export class SignInPage extends BasePage {
 
     getLoginElements(): [Locator, string][] {
         return [
-          [this.usernameInputBox(), 'Username input'],
-          [this.passwordInputBox(), 'Password input'],
-          [this.signInButton(), 'Sign in button'],
-          [this.signUpButton(), 'Sign up button'],
-          [this.rememberMeCheckbox(), 'Remember me checkbox'],
+            [this.usernameInputBox(), 'Username input'],
+            [this.passwordInputBox(), 'Password input'],
+            [this.signInButton(), 'Sign in button'],
+            [this.signUpButton(), 'Sign up button'],
+            [this.rememberMeCheckbox(), 'Remember me checkbox'],
         ];
-      }
+    }
+
+    /**
+     * Check if user is signed in
+     */
+    async isSignedIn(): Promise<boolean> {
+        try {
+            await this.page.waitForSelector(S.buttonSignUp, { state: 'detached', timeout: 5000 });
+            return true;
+        } catch {
+            return false;
+        }
+    }
 }

@@ -13,5 +13,3 @@ eslint-plugin-playwright \
 yarn add -D allure-playwright
 npm install -g allure-commandline --save-dev
 yarn add -D allure-commandline
-yarn add -D dotenv
-yarn add winston

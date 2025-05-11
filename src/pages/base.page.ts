@@ -71,7 +71,7 @@ export abstract class BasePage {
         body: Buffer.from(`Fill "${text}" into the field ${selector}`),
       });
       await this.clearField(selector);
-      await (await this.getElement(selector)).fill(text);
+      await (await this.getElementDebug(selector)).fill(text);
     });
   }
 
@@ -85,7 +85,7 @@ export abstract class BasePage {
         contentType: 'text/plain',
         body: Buffer.from(`Clear field ${selector}`),
       });
-      await (await this.getElement(selector)).clear();
+      await (await this.getElementDebug(selector)).clear();
     });
   }
 
@@ -99,7 +99,7 @@ export abstract class BasePage {
         contentType: 'text/plain',
         body: Buffer.from(`Click on element ${selector}`),
       });
-      await (await this.getElement(selector)).click();
+      await (await this.getElementDebug(selector)).click();
     });
   }
 }
