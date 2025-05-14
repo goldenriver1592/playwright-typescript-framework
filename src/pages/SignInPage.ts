@@ -1,5 +1,5 @@
 import { Locator } from '@playwright/test';
-import { SignInPageSelectors as S, SignInPageMessages as M } from '../data/constants/pages/signInPageConstants';
+import { SignInPageSelectors as S, SignInPageMessages as M } from '@constants/pages/signInPageConstants';
 import { BasePage } from "./BasePage";
 
 

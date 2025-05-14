@@ -1,4 +1,4 @@
-import { test, expect } from '@fixtures/test.fixture';
+import { test, expect } from '@tests/fixtures';
 import { PAGE_URLS } from '@data/urls';
 import { VALID_USER } from '@data/users';
 import { assertElementsVisible } from '@helpers/assertions';
