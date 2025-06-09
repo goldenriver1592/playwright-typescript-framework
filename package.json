@@ -19,6 +19,7 @@
     "typescript": "^5.8.3"
   },
   "scripts": {
+    "codegen": "npx playwright codegen",
     "lint": "eslint tests --ext .ts",
     "format": "prettier --write .",
     "delete:reports": "rm -r allure-results/* || true && rm -r allure-report/* || true",
@@ -27,6 +28,7 @@
     "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report",
     "allure:report": "yarn allure:generate && yarn allure:open",
-    "test:allure": "yarn prereport && yarn test && yarn allure:report || echo 'Test failed' && yarn allure:report"
+    "test:allure": "yarn prereport && yarn test && yarn allure:report || echo 'Test failed' && yarn allure:report",
+    "test:repeat": "yarn prereport && yarn test --repeat-each=2 && yarn allure:report || echo 'Test failed' && yarn allure:report"
   }
 }

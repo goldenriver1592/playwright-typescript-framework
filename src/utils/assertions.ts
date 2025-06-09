@@ -6,6 +6,6 @@ export function assertVisible(el: Locator, name?: string) {
   });
 }
 
-export function assertElementsVisible(list: [Locator, string][]) {
+export function assertElementsVisible(list: [locator: Locator, name: string][]) {
   return Promise.all(list.map(([el, name]) => assertVisible(el, name)));
 }

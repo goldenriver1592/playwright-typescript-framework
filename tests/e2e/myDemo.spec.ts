@@ -1,7 +1,7 @@
 import { test, expect } from '@tests/fixtures';
 import { PAGE_URLS } from '@data/urls';
 import { VALID_USER } from '@data/users';
-import { assertElementsVisible } from '@helpers/assertions';
+import { assertElementsVisible } from '@utils/assertions';
 
 test.describe('My first demo', () => {
     test('@smoke test goto', async ({ page }) => {

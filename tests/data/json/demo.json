@@ -1,0 +1,12 @@
+{
+    "users" : {
+        "user1": {
+            "username": "Heath93",
+            "password": "s3cret"
+        },
+        "user2": {
+            "username": "Heath93",
+            "password": "s3cret"            
+        }
+    }
+}

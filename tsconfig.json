@@ -32,7 +32,7 @@
     "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     "paths": {
       "@components/*": ["src/components/*"],
-      "@helpers/*": ["src/helpers/*"],
+      "@utils/*": ["src/utils/*"],
       "@pages/*": ["src/pages/*"],
       "@constants/*": ["src/constants/*"],
       "@tests/*": ["tests/*"],
